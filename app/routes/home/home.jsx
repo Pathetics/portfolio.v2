@@ -125,7 +125,7 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
+        title="Relax"
         description="Design and development for a video game tracking app built in React Native"
         buttonText="Under Development"
         buttonLink=""
