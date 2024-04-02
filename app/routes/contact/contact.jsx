@@ -119,72 +119,46 @@ export const Contact = () => {
               as="h1"
               style={getDelay(tokens.base.durationXS, initDelay, 0.3)}
             >
-              <DecoderText text="Say hello" start={status !== 'exited'} delay={300} />
+              <DecoderText text="Contact" start={status !== 'exited'} delay={300} />
             </Heading>
-            <Divider
-              className={styles.divider}
-              data-status={status}
-              style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
-            />
-            {/* Hidden honeypot field to identify bots */}
-            <Input
-              className={styles.botkiller}
-              label="Name"
-              name="name"
-              maxLength={MAX_EMAIL_LENGTH}
-            />
-            <Input
-              required
-              className={styles.input}
-              data-status={status}
-              style={getDelay(tokens.base.durationXS, initDelay)}
-              autoComplete="email"
-              label="Your email"
-              type="email"
-              name="email"
-              maxLength={MAX_EMAIL_LENGTH}
-              {...email}
-            />
-            <Input
-              required
-              multiline
-              className={styles.input}
-              data-status={status}
-              style={getDelay(tokens.base.durationS, initDelay)}
-              autoComplete="off"
-              label="Message"
-              name="message"
-              maxLength={MAX_MESSAGE_LENGTH}
-              {...message}
-            />
-            <Transition
-              unmount
-              in={!sending && actionData?.errors}
-              timeout={msToNum(tokens.base.durationM)}
-            >
-              {({ status: errorStatus, nodeRef }) => (
-                <div
-                  className={styles.formError}
-                  ref={nodeRef}
-                  data-status={errorStatus}
-                  style={cssProps({
-                    height: errorStatus ? errorRef.current?.offsetHeight : 0,
-                  })}
-                >
-                  <div className={styles.formErrorContent} ref={errorRef}>
-                    <div className={styles.formErrorMessage}>
-                      <Icon className={styles.formErrorIcon} icon="error" />
-                      {actionData?.errors?.email}
-                      {actionData?.errors?.message}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </Transition>
+            
+            <p><h5>Address:</h5> Azimpur, Dhaka, Bangladesh</p>
             <Button
               className={styles.button}
               data-status={status}
               data-sending={sending}
+              href="https://facebook.com/lalalalalalllallalaallalala"
+              style={getDelay(tokens.base.durationM, initDelay)}
+              disabled={sending}
+              loading={sending}
+              loadingText="Sending..."
+              icon="facebook"
+              type="submit"
+            >
+              Facebook
+            </Button>
+            <p></p>
+            
+            <Button
+              className={styles.button}
+              data-status={status}
+              data-sending={sending}
+              href="https://www.linkedin.com/in/evan-ahmed-shoaib-28928b215"
+              style={getDelay(tokens.base.durationM, initDelay)}
+              disabled={sending}
+              loading={sending}
+              loadingText="Sending..."
+              icon="linkedin"
+              type="submit"
+            >
+              LinkedIn
+            </Button>
+            <p></p>
+            <Button
+              className={styles.button}
+              data-status={status}
+              data-sending={sending}
+              href="mailto:evanahmedshoaib@gmail.com"
               style={getDelay(tokens.base.durationM, initDelay)}
               disabled={sending}
               loading={sending}
@@ -192,9 +166,11 @@ export const Contact = () => {
               icon="send"
               type="submit"
             >
-              Send message
+              Email
             </Button>
           </Form>
+          
+          
         )}
       </Transition>
       <Transition unmount in={actionData?.success}>
