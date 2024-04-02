@@ -1,7 +1,4 @@
 __  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
 
 The humans.txt file explains the team, technology,
 and graphic assets behind this site humanstxt.org.
@@ -10,7 +7,7 @@ _______________________________________________________________________________
 
 DESIGNER | デザイナー
 
-Hamish Williams
+Evan Ahmed Shoaib
 Hand crafted design & web development
 
 Design tools:

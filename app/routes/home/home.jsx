@@ -41,8 +41,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
-    description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
+    title: 'Portfolio',
+    description: `Design portfolio of ${config.name} — a web designer working on pc & mobile apps with a focus on motion, experience design, and accessibility.`,
   });
 };
 
@@ -100,24 +100,25 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-1"
-        sectionRef={projectOne}
-        visible={visibleSections.includes(projectOne.current)}
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Zahoor"
+        description="Zahoor is a Bangladeshi e-commerce destination, curating a diverse selection of products for discerning customers nationwide."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/slice"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'Annotating a hompage image of Zahoor',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
+              srcSet: `${sliceTexture} 800w, ${sliceTexture} 1920w`,
+              placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
       />
+      
       <ProjectSummary
         id="project-2"
         alternate
@@ -126,43 +127,44 @@ export const Home = () => {
         index={2}
         title="Video game progress tracking"
         description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonText="Under Development"
+        buttonLink=""
         model={{
           type: 'phone',
           alt: 'App login screen',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2} 750w`,
+              placeholder: gamestackTexture2Placeholder,
             },
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${gamestackTexture} 375w, ${gamestackTexture} 750w`,
+              placeholder: gamestackTexturePlaceholder,
             },
           ],
         }}
       />
       <ProjectSummary
         id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
+        sectionRef={projectOne}
+        visible={visibleSections.includes(projectOne.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Immersive Learning: Education in 3-Dimension"
+        description="We want to take the platform in a bold new direction, focusing on becoming the best tool for learning."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: '3D Learning Project',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
+              srcSet: `${sprTexture} 1280w, ${sprTexture} 2560w`,
+              placeholder: sprTexturePlaceholder,
             },
           ],
         }}
       />
+      
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
