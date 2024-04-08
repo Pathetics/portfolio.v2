@@ -36,5 +36,9 @@ export default defineConfig({
       },
     }),
     jsconfigPaths(),
+    {
+      test: /\.glsl$/i,
+      use: 'glslify',
+    },
   ],
 });
