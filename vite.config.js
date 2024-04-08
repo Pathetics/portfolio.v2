@@ -10,6 +10,8 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
+import rawLoader from 'raw-loader';
+
 
 const isStorybook = process.argv[1]?.includes('storybook');
 
@@ -36,9 +38,10 @@ export default defineConfig({
       },
     }),
     jsconfigPaths(),
+    // Add the Glslify configuration here:
     {
-      test: /\.glsl$/i,
-      use: 'glslify',
+      test: /\.glsl$/i, // Matches files ending with .glsl (case-insensitive)
+      use: rawLoader,    // Use raw-loader for these files
     },
   ],
 });
